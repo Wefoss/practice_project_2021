@@ -1,0 +1,23 @@
+[
+    {
+        "id": 1,
+        "title": "managed contests",
+        "descriptions": "Combine the power of crowdsourcing with the rich experience of our branding consultants. Get a complete agency-level experience.",
+        "link": "https://www.squadhelp.com/managed-contests",
+        "icon": "fab fa-whmcs"
+    },
+    {
+        "id": 2,
+        "title": "audience testing",
+        "descriptions": "Get unbiased feedback from real people to choose your most important brand elements with confidence!",
+        "link": "https://www.squadhelp.com/brand-name-testing",
+        "icon": "fa fa-users"
+    },
+    {
+        "id": 3,
+        "title": "trademark support",
+        "descriptions": "Work with our team of experienced licensed trademark attorneys to protect your name, tagline, and logo with the USPTO.",
+        "link": "https://helpdesk.squadhelp.com/squadhelp-services/trademark-filing-package",
+        "icon": "fa fa-trademark"
+    }
+]
