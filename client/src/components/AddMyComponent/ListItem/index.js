@@ -17,7 +17,7 @@ const colorIcons = {
 };
 
 const ListItem = ({ items: { title, id, descriptions, link, icon } }) => {
-  const audienceHover = cx(styles.icon_wrap, {
+  const classNames = cx(styles.icon_wrap, {
     [styles.audience_hover]: colorIcons[fontIcons[icon]] === COLOR_ICONS.lightGreen,
     [styles.redbg_redcolor]:
       colorIcons[fontIcons[icon]] === COLOR_ICONS.lightRed && fontIcons[icon] === BG_ICONS.lightRed,
@@ -29,7 +29,7 @@ const ListItem = ({ items: { title, id, descriptions, link, icon } }) => {
 
   return (
     <article className={styles.listitem}>
-      <div className={audienceHover}>
+      <div className={classNames}>
         <i className={icon}></i>
       </div>
       <h2>{title}</h2>
