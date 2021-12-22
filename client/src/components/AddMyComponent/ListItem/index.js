@@ -1,28 +1,36 @@
 import React from "react";
 import styles from "./ListItem.module.scss";
+import cx from "classnames";
+import constants from "../../../constants";
+
+const { BG_ICONS, COLOR_ICONS } = constants;
 
 const fontIcons = {
-  "fab fa-whmcs": "#f6e7e6",
-  "fa fa-users": "#dff5f2",
-  "fa fa-trademark": "#e4edfb",
+  "fab fa-whmcs": BG_ICONS.lightRed,
+  "fa fa-users": BG_ICONS.lightGreen,
+  "fa fa-trademark": BG_ICONS.lightBlue,
 };
 const colorIcons = {
-  "#f6e7e6": "red",
-  "#dff5f2": "green",
-  "#e4edfb": "blue",
+  [BG_ICONS.lightRed]: COLOR_ICONS.lightRed,
+  [BG_ICONS.lightGreen]: COLOR_ICONS.lightGreen,
+  [BG_ICONS.lightBlue]: COLOR_ICONS.lightBlue,
 };
 
 const ListItem = ({ items: { title, id, descriptions, link, icon } }) => {
+  const audienceHover = cx(styles.icon_wrap, {
+    [styles.audience_hover]: colorIcons[fontIcons[icon]] === COLOR_ICONS.lightGreen,
+    [styles.redbg_redcolor]:
+      colorIcons[fontIcons[icon]] === COLOR_ICONS.lightRed && fontIcons[icon] === BG_ICONS.lightRed,
+    [styles.greenbg_greencolor]:
+      colorIcons[fontIcons[icon]] === COLOR_ICONS.lightGreen && fontIcons[icon] === BG_ICONS.lightGreen,
+    [styles.bluebg_bluecolor]:
+      colorIcons[fontIcons[icon]] === COLOR_ICONS.lightBlue && fontIcons[icon] === BG_ICONS.lightBlue,
+  });
+
   return (
     <article className={styles.listitem}>
-      <div
-        className={styles.icon_wrap}
-        style={{
-          backgroundColor: `${fontIcons[icon]}`,
-          color: `${colorIcons[fontIcons[icon]]}`,
-        }}
-      >
-        <i class={icon}></i>
+      <div className={audienceHover}>
+        <i className={icon}></i>
       </div>
       <h2>{title}</h2>
       <p>

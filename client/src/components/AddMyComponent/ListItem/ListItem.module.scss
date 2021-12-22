@@ -1,3 +1,5 @@
+@import '../../../common/styles/variables';
+
 .listitem {
   flex: 1 1 33.3%;
   padding: 10px;
@@ -5,16 +7,17 @@
   flex-direction: column;
   align-items: center;
 
+
   .icon_wrap {
     width: 45px;
     height: 45px;
     border-radius: 50%;
     margin: 2rem 0;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: flex-end;
   }
-
 
   h2 {
     text-transform: capitalize;
@@ -25,21 +28,54 @@
     font-size: x-large;
   }
 
-
   p {
+    padding: 0 10px;
     line-height: 1.2rem;
-    font-size: 0.8rem;
-    color: #8c98a4;
+    font-size: 1rem;
+    color: $fontColorLightGray;
+    
   }
 
   a {
     text-decoration: none;
     color: inherit;
-    border-bottom: dashed 1px #8c98a4;
+    border-bottom: dashed 1px $fontColorLightGray;
 
     &:hover {
-      color: #007bff;
-      border-bottom: dashed 1px #007bff;;
+      color: $lightBlue;
+      border-bottom: dashed 1px $lightBlue;
     }
   }
 }
+
+.listitem .audience_hover {
+  transition: all ease 0.3s;
+}
+
+.listitem .audience_hover:hover {
+  background-color: $iconColorLightGreen;
+}
+
+.audience_hover i {
+  transition: color ease 0.3s;
+}
+
+.audience_hover:hover i {
+  color: #fff;
+}
+
+.redbg_redcolor {
+  background-color: $bgLightRed;
+  color: $iconColorLightRed;
+}
+
+.greenbg_greencolor {
+  background-color: $bgLightGreen;
+  color: $iconColorLightGreen;
+}
+
+.bluebg_bluecolor {
+  background-color: $bgLightBlue;
+  color: $iconColorLightBlue;
+}
+

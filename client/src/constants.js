@@ -2,6 +2,16 @@ const env = process.env.NODE_ENV || 'development'
 const serverIP = 'localhost'
 const serverPort = 5000
 export default {
+  BG_ICONS: {
+  lightRed: '#f6e7e6',
+  lightGreen: '#dff5f2',
+  lightBlue: '#e4edfb'
+  },
+  COLOR_ICONS: {
+    lightRed: '#de4437',
+    lightGreen: '#00c9a7',
+    lightBlue: '#377dff'
+    },
   CUSTOMER: 'customer',
   CREATOR: 'creator',
   CONTEST_STATUS_ACTIVE: 'active',

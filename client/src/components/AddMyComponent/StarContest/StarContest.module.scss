@@ -1,0 +1,56 @@
+.starContest {
+  max-width: 1140px;
+  margin: 1rem auto;
+  padding: 10px;
+  &_content {
+    align-items: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    justify-content: space-between;
+    border-radius: 5px;
+    color: #fff;
+    background: linear-gradient(
+      30deg,
+      rgba(25, 160, 255, 0.85) 0%,
+      rgba(45, 21, 130, 0.9) 100%
+    );
+    @media screen and(min-width: 466px) {
+      display: flex;
+      align-items: flex-start;
+    }
+    @media screen and(min-width: 600px) {
+      align-items: center;
+      flex-direction: row;
+      & > p {
+        line-height: 1.2rem;
+        width: 70%;
+      }
+    }
+  }
+  &_link {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 300;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    transition: all ease 0.2s;
+
+    @media screen and(min-width: 600px) {
+      margin-top: 0px;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 11px rgba(255, 255, 255, 0.3);
+      background-color: #ececec;
+    }
+
+    p {
+      margin-left: 5px;
+    }
+  }
+}
