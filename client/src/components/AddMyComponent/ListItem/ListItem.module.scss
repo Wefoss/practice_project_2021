@@ -1,6 +1,6 @@
 @import '../../../common/styles/variables';
 
-.listitem {
+.listItem {
   flex: 1 1 33.3%;
   padding: 10px;
   display: flex;
@@ -48,11 +48,11 @@
   }
 }
 
-.listitem .audience_hover {
+.listItem .audience_hover {
   transition: all ease 0.3s;
 }
 
-.listitem .audience_hover:hover {
+.listItem .audience_hover:hover {
   background-color: $iconColorLightGreen;
 }
 

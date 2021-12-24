@@ -10,6 +10,7 @@ import carouselConstants from '../../carouselConstants';
 import Spinner from '../../components/Spinner/Spinner';
 import AgencyLevel from '../../components/AddMyComponent/AgencyLevel';
 import StarContest from '../../components/AddMyComponent/StarContest';
+import Pricing from '../../components/AddMyComponent/Pricing';
 
 const Home = (props) => {
   const [index, setIndex] = useState(0);
@@ -216,6 +217,7 @@ const Home = (props) => {
               />
             </div>
           </div>
+          <Pricing />
           <StarContest/>
           <AgencyLevel />
           <Footer />

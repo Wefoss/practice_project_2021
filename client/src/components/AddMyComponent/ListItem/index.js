@@ -28,7 +28,7 @@ const ListItem = ({ items: { title, id, descriptions, link, icon } }) => {
   });
 
   return (
-    <article className={styles.listitem}>
+    <article className={styles.listItem}>
       <div className={classNames}>
         <i className={icon}></i>
       </div>
