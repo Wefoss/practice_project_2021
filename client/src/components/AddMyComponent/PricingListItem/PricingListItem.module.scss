@@ -1,0 +1,28 @@
+.info {
+  display: none;
+}
+
+ .chapter:hover .info {
+  display: block;
+  position: absolute;
+  width: 150px;
+  padding: 1rem;
+  left: 110%;
+  line-height: 1.2rem;
+  border-radius: 5px;
+  box-shadow: 2px 3px 4px 3px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  z-index: 100;
+  transform: translate(0, -55%);
+  animation: popup ease 0.3s;
+}
+
+.chapter:hover .info::before {
+    content: "\2039";
+    position: absolute;
+    display: block;
+    font-size: 2rem;
+    right: 100%;
+    bottom: 45%;
+    color: rgb(199, 194, 194);
+}

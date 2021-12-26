@@ -2,6 +2,7 @@ import React from "react";
 import cx from "classnames";
 import styles from "./PricingListItems.module.scss";
 import PricingListItem from "../PricingListItem";
+import { useRef } from "react";
 
 const borderColor = {
   bronze: "#e0b48d",
@@ -11,18 +12,29 @@ const borderColor = {
 };
 
 const PricingListItems = ({
-  items: { id, pricing, title, price, save },
+  items: { id, pricing, title, price, link },
   items,
 }) => {
   const { ...rest } = items["main section"];
 
   const renderResurses = (str) => {
     const resources = Object.keys(rest[str]);
+    const resourcesInfo = Object.values(rest[str]);
 
     return (
-      <div>
-        {resources} <p>{rest[str][resources]}</p>
-      </div>
+      <ul className={styles.resources}>
+        {resources.map((el, id) => (
+          <li key={id}>
+            <p>
+              <i style={{ fontSize: "smaller" }} className="fas fa-check"></i>{" "}
+              {el}
+            </p>
+            <p id={id} className={styles.resources_info}>
+              {resourcesInfo[id]}
+            </p>
+          </li>
+        ))}
+      </ul>
     );
   };
 
@@ -45,11 +57,24 @@ const PricingListItems = ({
         <h1>{pricing}</h1>
         <h3>{title}</h3>
         <span>US${price}</span>
-        <span>Save ${save}</span>
       </div>
-      <p>{items.description1}</p>
-      <p>{items.description2}</p>
-      <ul>{Object.keys(rest).map(renderPricingItems)}</ul>
+
+      <ul className={styles.mainSection}>
+        {Object.keys(rest).map(renderPricingItems)}
+      </ul>
+
+      {link && (
+        <p className={styles.card_link}>
+          Learn More about <a href={link}>Managed Contest Service</a>{" "}
+        </p>
+      )}
+      <a
+        style={{ backgroundColor: `${borderColor[pricing]}` }}
+        className={styles.card_btn}
+        href="#"
+      >
+        <i className="fas fa-check"></i> Start
+      </a>
     </article>
   );
 };

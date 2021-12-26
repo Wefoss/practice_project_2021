@@ -85,8 +85,11 @@
     "price": 2748,
     "save": 250,
     "id": 4,
-    "description1": "Receive optimum results from your Platinum Contest by launching a Managed Contest Package and working one-on-one with an experienced Squadhelp Branding Consultant.",
-    "description2": "With significantly more validation services, professional brief creation, and daily management of your contest by your Branding Expert, you'll receive an enhanced branding experience to closeout your branding project.",
+    "main section": {
+      "description1": "Receive optimum results from your Platinum Contest by launching a Managed Contest Package and working one-on-one with an experienced Squadhelp Branding Consultant.",
+      "description2": "With significantly more validation services, professional brief creation, and daily management of your contest by your Branding Expert, you'll receive an enhanced branding experience to closeout your branding project."
+    },
+   
     "link": "https://www.squadhelp.com/managed-contests"
   }
 ]
