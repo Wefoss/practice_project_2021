@@ -2,12 +2,16 @@
   display: none;
 }
 
- .chapter:hover .info {
+.chapter {
+  cursor: pointer;
+}
+
+ .chapter:not(.managen):hover .info {
   display: block;
   position: absolute;
   width: 150px;
   padding: 1rem;
-  left: 110%;
+  left: 105%;
   line-height: 1.2rem;
   border-radius: 5px;
   box-shadow: 2px 3px 4px 3px rgba(0, 0, 0, 0.3);
@@ -25,4 +29,21 @@
     right: 100%;
     bottom: 45%;
     color: rgb(199, 194, 194);
+}
+
+.chapter:not(.managen):last-child {
+  transition: all ease 0.1s;
+}
+
+.chapter:not(.managen):last-child:hover {
+    padding-bottom: 0.6rem;
+}
+
+@keyframes popup {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

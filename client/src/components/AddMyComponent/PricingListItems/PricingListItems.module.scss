@@ -1,8 +1,5 @@
 .card + .card {
-  margin-left: 2rem;
-}
-a {
-  text-decoration: none;
+  margin-left: 1.5rem;
 }
 
 .mainSection > li:first-child {
@@ -12,37 +9,11 @@ a {
 .card:last-child ul li:first-child {
   border-bottom: none;
 }
-.resources {
-  border-bottom: 2px solid #ddd;
-  cursor: pointer;
-  &_info {
-    display: none;
-  }
-}
-
-.resources li:hover .resources_info {
-  display: block;
-  position: absolute;
-  width: 150px;
-  padding: 1rem;
-  left: 100%;
-  line-height: 1.2rem;
-  border-radius: 5px;
-  box-shadow: 2px 3px 4px 3px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-  z-index: 100;
-  transform: translate(0, -55%);
-  animation: popup ease 0.3s;
-}
-.resources li:hover .resources_info::before {
-  content: "\2039";
-  position: absolute;
-  display: block;
-  font-size: 2rem;
-  right: 100%;
-  bottom: 45%;
-  color: rgb(199, 194, 194);
-}
+// .resources {
+//   border-bottom: 2px solid #ddd;
+//   cursor: pointer;
+ 
+// }
 
 .card:last-child {
   font-size: 1rem;
@@ -56,7 +27,7 @@ a {
   font-size: 0.9rem;
 
   &:hover &_header {
-     box-shadow: 3px 3px 4px 4px rgba(0, 0, 0, 0.4);
+     box-shadow: 3px 5px 4px 5px rgba(0, 0, 0, 0.4);
    }
      &_header {
     display: flex;
@@ -92,40 +63,38 @@ a {
     padding: 0.5rem 0 1rem 0.5rem;
   }
   li ul li {
-    padding: 1rem 0 0 0.5rem;
+    padding: 1rem 0 0.2rem 0.5rem;
     font-weight: 500;
     font-size: 0.7rem;
   }
 
   &_btn {
     display: block;
+    text-align: center;
     padding: 1rem 2rem;
     border-radius: 5px;
-    text-align: center;
+    margin-top: 0.5rem;
     font-weight: 600;
     color: #fff;
-    transition: transform ease 0.2s;
-    &:hover {
-      transform: translate(0px, 2px);
-    }
+       
   }
   &_link {
     padding: 1rem 0rem 1.7rem;
-    a {
-      color: #337ab7;
+  
+  }
+  a {
+    text-decoration: none;
+  }
+  a:not(.card_btn) {
+    color: #337ab7;
+    &:hover {
+      color: #23527c;
     }
   }
 }
 
-@keyframes popup {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 
-// .card:hover .card_header {
-//   box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
-// }
+
+
+
+
