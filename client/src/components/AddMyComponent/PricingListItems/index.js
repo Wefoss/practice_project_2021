@@ -3,6 +3,7 @@ import cx from "classnames";
 import styles from "./PricingListItems.module.scss";
 import PricingListItem from "../PricingListItem";
 import PricingResurses from "../PricingResurses";
+import PricingListItemSection from "../PricingListItemSection";
 
 const borderColor = {
   bronze: "#e0b48d",
@@ -17,24 +18,16 @@ const PricingListItems = ({
 }) => {
   const { ...rest } = items["main section"];
 
-  // const renderResurses = (str) => {
-  //   const resources = Object.keys(rest[str]);
-           
-  //   return (
-  //     <ul className={styles.resources}>
-  //       {resources.map((el, id) => (
-  //         <li key={id}>
-  //           <p>
-  //             <i style={{ fontSize: "smaller" }} className="fas fa-check"></i>{" "}
-  //             {el} {el === 'Audience Testing(Up to 6 Names)' && <a href="#">View Sample Report</a>}
-  //           </p>
-  //           <p id={id} className={styles.resources_info}>
-  //             {rest[str][el]}
-  //           </p>
-  //         </li>
-  //       ))}
-  //     </ul>
-  //   );
+  // const [toggle, setToggleContent] = useState(false);
+  // const hideAndOpenMobailContent = cx(styles.card_adapth, {
+  //   [styles.hide]: !toggle,
+  //   [styles.open]: toggle,
+  // });
+
+  // const cardBorder = cx(styles.adapthSection, styles[pricing]);
+
+  // const toggleContent = () => {
+  //   setToggleContent(toggle === false ? true : false);
   // };
 
   const renderPricingItems = (el, id) => {
@@ -42,7 +35,9 @@ const PricingListItems = ({
       <PricingListItem
         key={id}
         pricing={rest}
-        item={el === "resources" ? <PricingResurses items={rest} str={el} /> : el}
+        item={
+          el === "resources" ? <PricingResurses items={rest} str={el} /> : el
+        }
       />
     );
   };
@@ -50,30 +45,15 @@ const PricingListItems = ({
   return (
     <article className={styles.card}>
       <div
-      style={{ border: `10px solid ${borderColor[pricing]}` }}
-      className={styles.card_header}
-    >
-      <h1>{pricing}</h1>
-      <h3>{title}</h3>
-      <span>US${price}</span>
-    </div>
-
-      <ul className={styles.mainSection}>
-        {Object.keys(rest).map(renderPricingItems)}
-      </ul>
-
-      {link && (
-        <p className={styles.card_link}>
-          Learn More about <a href={link}>Managed Contest Service</a>{" "}
-        </p>
-      )}
-      <a
-        style={{ backgroundColor: `${borderColor[pricing]}` }}
-        className={styles.card_btn}
-        href="#"
+        style={{ border: `10px solid ${borderColor[pricing]}` }}
+        className={styles.card_header}
       >
-        <i className="fas fa-check"></i> Start
-      </a>
+        <h1>{pricing}</h1>
+        <h3>{title}</h3>
+        <span>US${price}</span>
+      </div>
+
+      <PricingListItemSection items={rest} link={link} pricing={pricing} />
     </article>
   );
 };

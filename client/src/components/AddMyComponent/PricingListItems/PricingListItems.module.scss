@@ -68,33 +68,65 @@
     font-size: 0.7rem;
   }
 
-  &_btn {
-    display: block;
-    text-align: center;
-    padding: 1rem 2rem;
-    border-radius: 5px;
-    margin-top: 0.5rem;
-    font-weight: 600;
-    color: #fff;
+  // &_btn {
+  //   display: block;
+  //   text-align: center;
+  //   padding: 1rem 2rem;
+  //   border-radius: 5px;
+  //   margin-top: 0.5rem;
+  //   font-weight: 600;
+  //   color: #fff;
        
-  }
-  &_link {
-    padding: 1rem 0rem 1.7rem;
+  // }
+  // &_link {
+  //   padding: 1rem 0rem 1.7rem;
   
-  }
-  a {
-    text-decoration: none;
-  }
-  a:not(.card_btn) {
-    color: #337ab7;
-    &:hover {
-      color: #23527c;
-    }
-  }
+  // }
+  // a {
+  //   text-decoration: none;
+  // }
+  // a:not(.card_btn) {
+  //   color: #337ab7;
+  //   &:hover {
+  //     color: #23527c;
+  //   }
+  // }
 }
 
 
 
 
+// .bronze {
+//   border: 5px solid #e0b48d;
+// }
+// .gold {
+//   border: 5px solid #e8b954;
+// }
+// .platinum {
+//   border: 5px solid #555;
+// }
+// .managed {
+//   border: 5px solid #28d2d0;
+// }
+
+// .card_adapth {
+//   display: none;
+// }
+
+// .open {
+//   animation: isOpen 0.8s ease;
+//   display: block;
+// }
+
+// @keyframes isOpen {
+//   0% {
+//     opacity: 0;
+//     max-height: 0px;
+//   }
+//   100% {
+//     opacity: 1;
+//     max-height: 600px;
+//   }
+// }
 
 
