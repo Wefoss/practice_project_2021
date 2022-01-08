@@ -1,9 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import cx from "classnames";
 import styles from "./PricingListItems.module.scss";
 import PricingListItem from "../PricingListItem";
 import PricingResurses from "../PricingResurses";
 import PricingListItemSection from "../PricingListItemSection";
+
 
 const borderColor = {
   bronze: "#e0b48d",
@@ -18,32 +19,22 @@ const PricingListItems = ({
 }) => {
   const { ...rest } = items["main section"];
 
-  // const [toggle, setToggleContent] = useState(false);
-  // const hideAndOpenMobailContent = cx(styles.card_adapth, {
-  //   [styles.hide]: !toggle,
-  //   [styles.open]: toggle,
-  // });
+  const [toggle, setToggleContent] = useState(false);
+  const hideAndOpenMobailContent = cx(styles.card_adapth, {
+    [styles.hide]: !toggle,
+    [styles.open]: toggle,
+  });
 
-  // const cardBorder = cx(styles.adapthSection, styles[pricing]);
+  const cardBorder = cx(styles.card, styles[pricing], hideAndOpenMobailContent);
 
-  // const toggleContent = () => {
-  //   setToggleContent(toggle === false ? true : false);
-  // };
-
-  const renderPricingItems = (el, id) => {
-    return (
-      <PricingListItem
-        key={id}
-        pricing={rest}
-        item={
-          el === "resources" ? <PricingResurses items={rest} str={el} /> : el
-        }
-      />
-    );
-  };
+  const togglePanl = () => {
+    setToggleContent(toggle === false ? true : false);
+      };
+  
+     
 
   return (
-    <article className={styles.card}>
+    <article className={cardBorder}>
       <div
         style={{ border: `10px solid ${borderColor[pricing]}` }}
         className={styles.card_header}
@@ -52,6 +43,12 @@ const PricingListItems = ({
         <h3>{title}</h3>
         <span>US${price}</span>
       </div>
+         
+         <div className={styles.adapthBtn} style={{color: `${borderColor[pricing]}`}}>
+            <div><span>{pricing}</span><span>US${price}</span></div>
+            {!toggle && <i onClick={togglePanl} className="fa fa-plus"></i>}
+           {toggle && <i onClick={togglePanl} className="fa fa-minus"></i>}
+         </div>
 
       <PricingListItemSection items={rest} link={link} pricing={pricing} />
     </article>
