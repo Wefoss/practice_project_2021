@@ -4,9 +4,18 @@
 
 .chapter {
   cursor: pointer;
+  border-bottom: 2px solid #ddd;
+  padding: 0.8rem 0;
+}
+.chapter:nth-child(3) {
+  border: none;
+}
+.managen {
+  border: none;
 }
 
- .chapter:not(.managen):hover .info {
+
+.chapter:not(.managen):hover .info {
   display: block;
   position: absolute;
   width: 150px;
@@ -22,21 +31,21 @@
 }
 
 .chapter:hover .info::before {
-    content: "\2039";
-    position: absolute;
-    display: block;
-    font-size: 2rem;
-    right: 100%;
-    bottom: 45%;
-    color: rgb(199, 194, 194);
+  content: "\2039";
+  position: absolute;
+  display: block;
+  font-size: 2rem;
+  right: 100%;
+  bottom: 45%;
+  color: rgb(199, 194, 194);
 }
 
 .chapter:not(.managen):last-child {
   transition: all ease 0.1s;
 }
 
-.chapter:not(.managen):last-child:hover {
-    padding-bottom: 0.6rem;
+.chapter:not(.managen):last-child:hover  {
+  margin-bottom: 0.2rem;
 }
 
 @keyframes popup {

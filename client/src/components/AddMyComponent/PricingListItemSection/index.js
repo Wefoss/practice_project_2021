@@ -31,7 +31,7 @@ const PricingListItemSection = ({items, link, pricing}) => {
       </ul>
 
       {link && (
-        <p className={styles.link}>
+        <p className={styles.link_str}>
           Learn More about <a href={link}>Managed Contest Service</a>{" "}
         </p>
       )}

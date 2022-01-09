@@ -1,10 +1,7 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import cx from "classnames";
 import styles from "./PricingListItems.module.scss";
-import PricingListItem from "../PricingListItem";
-import PricingResurses from "../PricingResurses";
 import PricingListItemSection from "../PricingListItemSection";
-
 
 const borderColor = {
   bronze: "#e0b48d",
@@ -27,11 +24,9 @@ const PricingListItems = ({
 
   const cardBorder = cx(styles.card, styles[pricing], hideAndOpenMobailContent);
 
-  const togglePanl = () => {
+  const togglePanl = (e) => {
     setToggleContent(toggle === false ? true : false);
-      };
-  
-     
+  };
 
   return (
     <article className={cardBorder}>
@@ -39,16 +34,22 @@ const PricingListItems = ({
         style={{ border: `10px solid ${borderColor[pricing]}` }}
         className={styles.card_header}
       >
-        <h1>{pricing}</h1>
+        <h1 style={{ color: `${borderColor[pricing]}` }}>{pricing}</h1>
         <h3>{title}</h3>
         <span>US${price}</span>
       </div>
-         
-         <div className={styles.adapthBtn} style={{color: `${borderColor[pricing]}`}}>
-            <div><span>{pricing}</span><span>US${price}</span></div>
-            {!toggle && <i onClick={togglePanl} className="fa fa-plus"></i>}
-           {toggle && <i onClick={togglePanl} className="fa fa-minus"></i>}
-         </div>
+
+      <div
+        className={styles.adapthBtn}
+        style={{ color: `${borderColor[pricing]}` }}
+      >
+        <div>
+          <span>{pricing}</span>
+          <span>US${price}</span>
+        </div>
+        {!toggle && <i onClick={togglePanl} className="fa fa-plus"></i>}
+        {toggle && <i onClick={togglePanl} className="fa fa-minus"></i>}
+      </div>
 
       <PricingListItemSection items={rest} link={link} pricing={pricing} />
     </article>

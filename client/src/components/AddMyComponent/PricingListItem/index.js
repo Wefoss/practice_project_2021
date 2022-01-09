@@ -10,6 +10,7 @@ const PricingListItem = ({ item, pricing }) => {
 
   const classNames = cx({
     [styles.chapter]: isChildList,
+    [styles.non_padding]: !isChildList,
     [styles.managen] : LastSectionsvalueAdjustment
   });
 

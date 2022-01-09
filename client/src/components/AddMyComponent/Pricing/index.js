@@ -1,16 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./Pricing.module.scss";
 import PricingListItems from "../PricingListItems";
 import pirsingContent from "./pricingContent.json";
 
 const Pricing = () => {
-  const [toggleWindow, setToggleWindow] = useState([
-    { bronze: false },
-    { gold: false },
-    { platinum: false },
-  ]);
-
-  
 
   return (
     <section className={styles.pricing}>
