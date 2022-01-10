@@ -26,7 +26,7 @@ const PricingListItemSection = ({items, link, pricing}) => {
 
   return (
     <>
-      <ul className={styles.mainSection}>
+      <ul className={styles.main_section}>
         {Object.keys(items).map(renderPricingItems)}
       </ul>
 

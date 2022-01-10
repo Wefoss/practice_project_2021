@@ -40,7 +40,7 @@ const PricingListItems = ({
       </div>
 
       <div
-        className={styles.adapthBtn}
+        className={styles.adapth_btn}
         style={{ color: `${borderColor[pricing]}` }}
       >
         <div>
