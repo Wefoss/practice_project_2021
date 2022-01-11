@@ -16,6 +16,7 @@ const PricingListItem = ({ item, pricing }) => {
 
   useEffect(() => {
     if (parentListItem.current.children.length > 1) {
+      parentListItem.current.previousElementSibling.dataset.borderNon = 'border'
       setIsChildList(false);
     }
   }, []);

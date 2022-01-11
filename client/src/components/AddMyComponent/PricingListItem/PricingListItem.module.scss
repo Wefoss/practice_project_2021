@@ -13,14 +13,18 @@
   animation: popup ease 0.3s;
 }
 
+
+
 .chapter {
   cursor: pointer;
   border-bottom: 2px solid #ddd;
   padding: 0.8rem 0;
 }
-.chapter:nth-child(3) {
+
+.chapter[data-border-non = border] {
   border: none;
 }
+
 .managen {
   border: none;
 }
@@ -56,4 +60,8 @@
   .chapter:not(.managen):hover .info {
     display: block;
   }
+}
+
+#border {
+  background-color: aqua;
 }
