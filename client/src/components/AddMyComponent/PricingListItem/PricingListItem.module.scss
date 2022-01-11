@@ -1,5 +1,16 @@
 .info {
   display: none;
+  position: absolute;
+  width: 150px;
+  padding: 1rem;
+  left: 105%;
+  line-height: 1.2rem;
+  border-radius: 5px;
+  box-shadow: 2px 3px 4px 3px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
+  z-index: 100;
+  transform: translate(0, -55%);
+  animation: popup ease 0.3s;
 }
 
 .chapter {
@@ -12,22 +23,6 @@
 }
 .managen {
   border: none;
-}
-
-
-.chapter:not(.managen):hover .info {
-  display: block;
-  position: absolute;
-  width: 150px;
-  padding: 1rem;
-  left: 105%;
-  line-height: 1.2rem;
-  border-radius: 5px;
-  box-shadow: 2px 3px 4px 3px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-  z-index: 100;
-  transform: translate(0, -55%);
-  animation: popup ease 0.3s;
 }
 
 .chapter:hover .info::before {
@@ -44,7 +39,7 @@
   transition: all ease 0.1s;
 }
 
-.chapter:not(.managen):last-child:hover  {
+.chapter:not(.managen):last-child:hover {
   margin-bottom: 0.2rem;
 }
 
@@ -54,5 +49,11 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .chapter:not(.managen):hover .info {
+    display: block;
   }
 }

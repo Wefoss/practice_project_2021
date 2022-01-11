@@ -3,11 +3,12 @@
 }
 
 .card:last-child {
-  font-size: 1rem;
-  line-height: 1.2rem;
+  line-height: 1.3rem;
 }
 
-
+.card:last-child a {
+  line-height: 0px;
+}
 
 .card {
   flex: 0 1 25%;
@@ -45,6 +46,8 @@
     }
     h1 {
       padding: 1rem 0;
+      font-weight: 600;
+      text-transform: capitalize;
     }
     span {
       padding-bottom: 1rem;
