@@ -9,15 +9,19 @@
 
 .link_str{
   margin-bottom: 1.5rem;
+  a {
+    color: #337ab7;
+  &:hover {
+    color: #23527c;
+  }
+  }
 }
 
 link {
   padding: 1rem 0rem 1.7rem;
 }
-a {
-  text-decoration: none;
-}
-a:not(.btn) {
+
+.main_section a:not(.btn) {
   color: #337ab7;
   &:hover {
     color: #23527c;
