@@ -98,7 +98,7 @@
   }
 }
 
- .bronze {
+.bronze {
   border: 5px solid #e0b48d;
 }
 .gold {
@@ -111,7 +111,7 @@
   border: 5px solid #28d2d0;
 }
 
-.hide {
+.closed {
   max-height: 3rem;
   overflow: hidden;
   transition: max-height 0.5s ease;
@@ -121,6 +121,13 @@
     overflow: initial;
   }
 }
+
+.hide {
+  max-height: 3rem;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+
 
 .open {
   max-height: 40rem;
@@ -151,4 +158,14 @@
   .managed {
     border: none;
   }
+}
+
+.card[closedCurrent] .icon_increment {
+  display: none;
+}
+.closed .icon_decrement {
+  display: none;
+}
+.hide .icon_decrement {
+  display: none;
 }
