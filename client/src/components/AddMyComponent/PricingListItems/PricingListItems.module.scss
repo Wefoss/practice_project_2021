@@ -111,7 +111,7 @@
   border: 5px solid #28d2d0;
 }
 
-.closed {
+.closed, .hide {
   max-height: 3rem;
   overflow: hidden;
   transition: max-height 0.5s ease;
@@ -120,12 +120,6 @@
     height: auto;
     overflow: initial;
   }
-}
-
-.hide {
-  max-height: 3rem;
-  overflow: hidden;
-  transition: max-height 0.5s ease;
 }
 
 
