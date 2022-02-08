@@ -2,13 +2,10 @@ import React, { useState, useRef } from "react";
 import cx from "classnames";
 import styles from "./PricingListItems.module.scss";
 import PricingListItemSection from "../PricingListItemSection";
+import constants from "../../../constants";
 
-const borderColor = {
-  bronze: "#e0b48d",
-  gold: "#e8b954",
-  platinum: "#555",
-  managed: "#28d2d0",
-};
+const {BORDER_COLOR} = constants
+
 
 const PricingListItems = ({
   items: { id, pricing, title, price, link },
@@ -25,7 +22,7 @@ const PricingListItems = ({
 
   const cardBorder = cx(styles.card, styles[pricing], hideAndOpenMobailContent);
 
-  const togglePanl = (e) => {
+  const togglePanel = (e) => {
     e.target.closest("ARTICLE").toggleAttribute("closedCurrent");
     if (e.target.closest("ARTICLE").hasAttribute("closedCurrent")) {
       setToggleContent(true);
@@ -46,24 +43,24 @@ const PricingListItems = ({
   return (
     <article ref={closeAdapthWindown} id={id} className={cardBorder}>
       <div
-        style={{ border: `10px solid ${borderColor[pricing]}` }}
+        style={{ border: `10px solid ${BORDER_COLOR[pricing]}` }}
         className={styles.card_header}
       >
-        <h1 style={{ color: `${borderColor[pricing]}` }}>{pricing}</h1>
+        <h1 style={{ color: `${BORDER_COLOR[pricing]}` }}>{pricing}</h1>
         <h3>{title}</h3>
         <span>US${price}</span>
       </div>
 
       <div
         className={styles.adapth_btn}
-        style={{ color: `${borderColor[pricing]}` }}
+        style={{ color: `${BORDER_COLOR[pricing]}` }}
       >
         <div>
           <span>{pricing}</span>
           <span>US${price}</span>
         </div>
-         <span className={styles.icon_increment}><i onClick={togglePanl} className="fa fa-plus"></i></span>
-         <span className={styles.icon_decrement}><i onClick={togglePanl} className="fa fa-minus"></i></span> 
+         <span className={styles.icon_increment}><i onClick={togglePanel} className="fa fa-plus"></i></span>
+         <span className={styles.icon_decrement}><i onClick={togglePanel} className="fa fa-minus"></i></span> 
       </div>
 
       <PricingListItemSection items={rest} link={link} pricing={pricing} />

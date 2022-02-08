@@ -2,13 +2,10 @@ import React from "react";
 import styles from "./PricingListItemSection.module.scss";
 import PricingListItem from "../PricingListItem";
 import PricingResurses from "../PricingResurses";
+import constants from "../../../constants";
 
-const borderColor = {
-    bronze: "#e0b48d",
-    gold: "#e8b954",
-    platinum: "#555",
-    managed: "#28d2d0",
-  };
+const {BORDER_COLOR} = constants
+
 
 const PricingListItemSection = ({items, link, pricing}) => {
    
@@ -36,7 +33,7 @@ const PricingListItemSection = ({items, link, pricing}) => {
         </p>
       )}
       <a
-        style={{ backgroundColor: `${borderColor[pricing]}` }}
+        style={{ backgroundColor: `${BORDER_COLOR[pricing]}` }}
         className={styles.btn}
         href="#"
       >

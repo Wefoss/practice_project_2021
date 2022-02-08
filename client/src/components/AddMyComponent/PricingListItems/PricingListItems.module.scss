@@ -111,7 +111,8 @@
   border: 5px solid #28d2d0;
 }
 
-.closed, .hide {
+.closed,
+.hide {
   max-height: 3rem;
   overflow: hidden;
   transition: max-height 0.5s ease;
@@ -121,7 +122,6 @@
     overflow: initial;
   }
 }
-
 
 .open {
   max-height: 40rem;
@@ -154,12 +154,8 @@
   }
 }
 
-.card[closedCurrent] .icon_increment {
-  display: none;
-}
-.closed .icon_decrement {
-  display: none;
-}
+.card[closedCurrent] .icon_increment,
+.closed .icon_decrement,
 .hide .icon_decrement {
   display: none;
 }

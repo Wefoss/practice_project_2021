@@ -2,6 +2,12 @@ const env = process.env.NODE_ENV || 'development'
 const serverIP = 'localhost'
 const serverPort = 5000
 export default {
+  BORDER_COLOR: {
+    bronze: "#e0b48d",
+    gold: "#e8b954",
+    platinum: "#555",
+    managed: "#28d2d0",
+  },
   BG_ICONS: {
   lightRed: '#f6e7e6',
   lightGreen: '#dff5f2',
